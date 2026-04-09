@@ -53,7 +53,9 @@ describe("unit tests", () => {
   test("isMatch returns false for bad primitive inputs", () => {
     expect(isMatch("a", "b")).toBe(false);
     expect(isMatch(1, 2)).toBe(false);
-    expect(isMatch({ dataset: { image: 1 } }, { dataset: { image: "1" } })).toBe(false);
+    expect(
+      isMatch({ dataset: { image: 1 } }, { dataset: { image: "1" } }),
+    ).toBe(false);
   });
 
   test("incrementMoves increases moves by 1", () => {
@@ -83,13 +85,33 @@ describe("unit tests", () => {
   });
 
   test("shuffledIndexes handles boundary lengths", () => {
-    expect(shuffledIndexes(0, vi.fn(() => 0.7))).toEqual([]);
-    expect(shuffledIndexes(1, vi.fn(() => 0.7))).toEqual([0]);
+    expect(
+      shuffledIndexes(
+        0,
+        vi.fn(() => 0.7),
+      ),
+    ).toEqual([]);
+    expect(
+      shuffledIndexes(
+        1,
+        vi.fn(() => 0.7),
+      ),
+    ).toEqual([0]);
   });
 
   test("shuffledIndexes handles invalid lengths", () => {
-    expect(shuffledIndexes(-3, vi.fn(() => 0.2))).toEqual([]);
-    expect(shuffledIndexes(2.5, vi.fn(() => 0.2))).toEqual([]);
+    expect(
+      shuffledIndexes(
+        -3,
+        vi.fn(() => 0.2),
+      ),
+    ).toEqual([]);
+    expect(
+      shuffledIndexes(
+        2.5,
+        vi.fn(() => 0.2),
+      ),
+    ).toEqual([]);
   });
 
   test("shuffledIndexes falls back when randomFn is invalid", () => {

@@ -138,7 +138,11 @@ export function stopTimer() {
 }
 
 export function formatTime(totalSeconds) {
-  if (typeof totalSeconds !== "number" || !Number.isFinite(totalSeconds) || totalSeconds < 0) {
+  if (
+    typeof totalSeconds !== "number" ||
+    !Number.isFinite(totalSeconds) ||
+    totalSeconds < 0
+  ) {
     return "00:00";
   }
 

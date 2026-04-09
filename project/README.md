@@ -6,6 +6,7 @@ A simple and modern memory game built with vanilla JavaScript.
 
 Flip cards two by two and try to find matching pairs.
 The game includes:
+
 - card shuffle at start/restart
 - move counter
 - timer
@@ -30,6 +31,5 @@ The game includes:
 Open `index.html` in your browser.
 
 ## UI screenshots
+
 ![](./screenshots/ui.png)
-
-
